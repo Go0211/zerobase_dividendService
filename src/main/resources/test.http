@@ -1,0 +1,15 @@
+### company post
+POST http://localhost:8080/company
+Content-Type: application/json
+
+{
+  "ticker": "z"
+}
+
+### company get all
+GET http://localhost:8080/company
+Content-Type: application/json
+
+### company page test
+GET http://localhost:8080/company?size=5&page=0
+Content-Type: application/json
