@@ -3,7 +3,7 @@ POST http://localhost:8080/company
 Content-Type: application/json
 
 {
-  "ticker": "z"
+  "ticker": "nke"
 }
 
 ### company get all
@@ -13,3 +13,37 @@ Content-Type: application/json
 ### company page test
 GET http://localhost:8080/company?size=5&page=0
 Content-Type: application/json
+
+### /dividend/{companyName} test
+GET http://localhost:8080/finance/dividend/NIKE, Inc. (NKE)
+Content-Type: application/json
+
+//{
+//  "companyName" : "NIKE, Inc. (NKE)"
+//}
+
+### autocomplete test
+GET http://localhost:8080/company/autocomplete?keyword=n
+Content-Type: application/json
+
+### sign up test
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "username" : "grace1",
+  "password" : "grace1231",
+  "role" : "ROLE_WRITE"
+}
+
+### sign in test
+POST http://localhost:8080/auth/signin
+Content-Type: application/json
+
+{
+  "username" : "grace1",
+  "password" : "grace1231"
+}
+
+### custom error test
+GET http://localhost:8080/finance/dividend/NICK
